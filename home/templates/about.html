@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+About
+{% endblock title %}
+
+{% block body %}
+
+<!-- Hero Section -->
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Predict Insurance Premiums with Confidence</h1>
+    <p class="col-md-8 fs-4">
+      This project leverages a trained <strong>Random Forest Machine Learning model</strong> to predict insurance premium costs based on user inputs like age, BMI, smoking status, and more. It's designed to be fast, reliable, and user-friendly for both customers and insurance professionals.
+    </p>
+    <a href="{% url 'prediction' %}" class="btn btn-primary btn-lg">Try Prediction Now</a>
+  </div>
+</div>
+
+<!-- Information Cards -->
+<div class="row align-items-md-stretch mb-5">
+  <div class="col-md-6 mb-3">
+    <div class="h-100 p-4 text-white bg-dark rounded-3">
+      <h2>Why This Project?</h2>
+      <p>
+        Insurance premiums vary due to multiple factors. Our goal is to make premium prediction transparent and accessible. By analyzing real-world data, we help users understand what affects their insurance costs.
+      </p>
+      <a href="https://wa.me/912345678912" target="_blank" class="btn btn-outline-light">
+          Contact
+      </a>
+    </div>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <div class="h-100 p-4 bg-light border rounded-3">
+      <h2>How It Works</h2>
+      <p>
+        We trained a <strong>Random Forest Regressor</strong> on a dataset that includes key insurance features like age, gender, region, smoking habits, BMI, and children. The model then provides accurate premium estimates instantly.
+      </p>
+      <a href="https://github.com/Hami-611/Insurance_Premium_Prediction" class="btn btn-outline-secondary" target="_blank">View Code on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<!-- Optional Team or Technology Section -->
+<div class="text-center py-5">
+  <h3 class="fw-bold">Technologies Used</h3>
+  <p class="text-muted">Django · Python · Bootstrap 5 · Random Forest · Pandas · Matplotlib · Scikit-learn</p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block body %}
+
+<!-- Hero Section -->
+<section class="bg-light py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Text Content -->
+      <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
+        <h1 class="display-5 fw-bold">Predict Insurance Premiums Instantly</h1>
+        <p class="lead">Leverage Machine Learning to estimate your insurance cost accurately and efficiently.</p>
+        <a href="{% url 'prediction' %}" class="btn btn-primary btn-lg">Try Now</a>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="col-md-6 text-center">
+        <img src="{% static 'images/home.svg' %}" alt="Hero Illustration" class="img-fluid" style="max-height: 400px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="container py-5">
+  <div class="row text-center">
+
+    <!-- About Card -->
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+        <img src="{% static 'images/about.svg' %}" class="img-fluid mb-3" alt="About" style="height: 160px;">
+          <h5 class="card-title fw-bold">About the Project</h5>
+          <p class="card-text">Explore how ML helps calculate insurance premiums and how it can benefit you.</p>
+          <a href="{% url 'about' %}" class="btn btn-outline-dark btn-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prediction Card -->
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <img src="{% static 'images/predict.svg' %}" class="img-fluid mb-3" alt="Prediction" style="height: 160px;">
+          <h5 class="card-title fw-bold">Make a Prediction</h5>
+          <p class="card-text">Fill out a few fields and get an instant estimate of your premium using our ML model.</p>
+          <a href="{% url 'prediction' %}" class="btn btn-outline-dark btn-sm">Predict Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Card -->
+    <div class="col-md-4 mb-4">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <img src="{% static 'images/contact.svg' %}" class="img-fluid mb-3" alt="Contact" style="height: 160px;">
+          <h5 class="card-title fw-bold">Contact Us</h5>
+          <p class="card-text">Have any questions or suggestions? We would love to hear from you!</p>
+          <a href="https://wa.me/912345678912" class="btn btn-outline-dark btn-sm">Contact</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}
