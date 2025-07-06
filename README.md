@@ -31,8 +31,6 @@ mlproject/
 ├── .env
 └── .gitignore
 
-````
-
 ---
 
 ## 🛠️ Setup Instructions
@@ -42,14 +40,12 @@ mlproject/
 ```bash
 git clone https://github.com/your-username/insurance.git
 cd insurance
-````
 
 ### 2. Create `.env` File
 
 ```env
 DEBUG=True
 SECRET_KEY=your-django-secret-key
-```
 
 ---
 
@@ -59,7 +55,6 @@ Static files are managed using WhiteNoise. To collect them:
 
 ```bash
 python manage.py collectstatic
-```
 
 They will be stored in the `/staticfiles/` directory.
 
@@ -75,7 +70,6 @@ You can install them using:
 
 ```bash
 pip install -r requirements.txt
-```
 
 ---
 
@@ -83,15 +77,7 @@ pip install -r requirements.txt
 
 ```bash
 python manage.py runserver
-```
 
----
-
-## 📌 Notes
-
-* Do not commit `.env` or `staticfiles/` to Git.
-* WhiteNoise is used to serve static files in production.
-* Replace SQLite with PostgreSQL for production-level deployment.
 
 ---
 
@@ -104,7 +90,4 @@ This project is licensed under the [MIT License](LICENSE).
 ## 👩‍💻 Author
 
 Made with ❤️ by **Hamika Redrowthu**
-
-```
-
 ```
