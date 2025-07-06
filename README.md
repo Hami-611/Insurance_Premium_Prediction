@@ -21,8 +21,6 @@ This is a Django-based web application that allows users to predict insurance ex
 
 ## 🗂️ Project Structure
 
-```
-
 mlproject/
 │
 ├── insurance/          # Django project folder (settings, wsgi, urls)
