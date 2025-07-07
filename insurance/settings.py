@@ -76,8 +76,6 @@ WSGI_APPLICATION = 'insurance.wsgi.application'
 #     }
 # }
 
-# DATABASES['default'] = dj_database_url.parse("postgresql://insurancepremiun_django_render_user:RVyJmNw88fW9wAPGLwoyH4k7xzJ5XvLX@dpg-d1ltckh5pdvs73ce9lug-a.oregon-postgres.render.com/insurancepremiun_django_render")
-
 DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -85,7 +83,7 @@ DATABASES = {
     )
 }
 
-# postgresql://insurancepremiun_django_render_user:RVyJmNw88fW9wAPGLwoyH4k7xzJ5XvLX@dpg-d1ltckh5pdvs73ce9lug-a.oregon-postgres.render.com/insurancepremiun_django_render
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
