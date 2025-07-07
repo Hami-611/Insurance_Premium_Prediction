@@ -31,11 +31,14 @@ def signup_view(request):
         username = request.POST.get("username")
         email = request.POST.get("email")
         password = request.POST.get("password")
+        
         if User.objects.filter(username=username).exists():
             return render(request, "signup.html", {"error": "Username already taken"})
+        
         user = User.objects.create_user(username=username, email=email, password=password)
         login(request, user)
         return redirect("home")
+
     return render(request, "signup.html")
 
 def index(request):

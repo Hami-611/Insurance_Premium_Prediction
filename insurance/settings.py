@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import dj_database_url
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -17,7 +18,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -67,13 +68,23 @@ WSGI_APPLICATION = 'insurance.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# DATABASES['default'] = dj_database_url.parse("postgresql://insurancepremiun_django_render_user:RVyJmNw88fW9wAPGLwoyH4k7xzJ5XvLX@dpg-d1ltckh5pdvs73ce9lug-a.oregon-postgres.render.com/insurancepremiun_django_render")
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3'),
+        conn_max_age=600
+    )
 }
 
+# postgresql://insurancepremiun_django_render_user:RVyJmNw88fW9wAPGLwoyH4k7xzJ5XvLX@dpg-d1ltckh5pdvs73ce9lug-a.oregon-postgres.render.com/insurancepremiun_django_render
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
