@@ -18,7 +18,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['insurance-premium-prediction-ti26.onrender.com', 'localhost', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://insurance-premium-prediction-ti26.onrender.com']
 
 
 # Application definition
