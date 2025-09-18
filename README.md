@@ -67,12 +67,6 @@ python manage.py runserver
 
 ---
 
-### 🌐 Live Demo
-
-> [https://insurance-premium-prediction-ti26.onrender.com](https://insurance-premium-prediction-ti26.onrender.com)
-
----
-
 ### 🧪 Sample Input
 
 | Feature  | Example Value                |
